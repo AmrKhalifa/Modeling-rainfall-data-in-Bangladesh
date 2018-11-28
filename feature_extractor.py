@@ -46,14 +46,20 @@ def get_stats(df):
 
 def get_feature_vector(df):
     means, stds = get_stats(df)
-    means = means / abs(means).max()
-    stds = stds / abs(stds).max()
 
-    return np.concatenate((means, stds)).reshape(1, -1)
+    #means = means / abs(means).max()
+    #stds = stds / abs(stds).max()
+    #stds = stds/1.5
+    sum_means_stds = (means+stds).reshape(1,-1)
+    means_stds = np.concatenate((means, stds)).reshape(1, -1)
+
+    return means_stds
+
+    #return (means + stds).reshape(1,-1)
 
 
 def define_data_frame():
-    dataFrame = pd.DataFrame(np.zeros((1, 24)))
+    dataFrame = pd.DataFrame(np.zeros((1, 13)))
 
     return dataFrame
 
@@ -89,3 +95,7 @@ save_dataframe2CSV(cluster_input, "cluster_dataset.csv")
 
 my_frame = pd.read_csv('cluster_dataset.csv')
 print(my_frame.values)
+
+for i in range (1,36):
+    plt.plot(my_frame.values[i])
+plt.show()
