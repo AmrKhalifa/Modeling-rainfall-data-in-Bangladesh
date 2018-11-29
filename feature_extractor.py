@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
 
 
 def read_data():
@@ -94,8 +95,18 @@ for i in range(1, 36):
 save_dataframe2CSV(cluster_input, "cluster_dataset.csv")
 
 my_frame = pd.read_csv('cluster_dataset.csv')
-print(my_frame.values)
+cluster_data = my_frame.values[1:,1:]
+#print(cluster_data.shape)
 
+errors = []
 for i in range (1,36):
-    plt.plot(my_frame.values[i])
+    kmeans = KMeans(n_clusters = i)
+    kmeans = kmeans.fit(cluster_data)
+
+    errors.append(kmeans.inertia_)
+
+plt.plot(errors)
 plt.show()
+
+labels = kmeans.predict(cluster_data)
+centroids = kmeans.cluster_centers_
