@@ -99,6 +99,8 @@ cluster_data = my_frame.values[1:,1:]
 #print(cluster_data.shape)
 
 errors = []
+
+np.random.seed(10)
 for i in range (1,36):
     kmeans = KMeans(n_clusters = i)
     kmeans = kmeans.fit(cluster_data)
@@ -108,5 +110,8 @@ for i in range (1,36):
 plt.plot(errors)
 plt.show()
 
+kmeans = KMeans(n_clusters=5)
+kmeans = kmeans.fit(cluster_data)
 labels = kmeans.predict(cluster_data)
-centroids = kmeans.cluster_centers_
+
+print(labels)
