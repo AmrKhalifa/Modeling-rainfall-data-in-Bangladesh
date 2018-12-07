@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ca0e95f-62c5-4585-9177-01925324cf6c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/data_descriptor.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_descriptor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LSTM_Modelling.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdaboostRegressor.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/AdaboostRegressor.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LSTM_predictor.py" beforeDir="false" afterPath="$PROJECT_DIR$/LSTM_predictor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/correlation_between_features.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/correlation_between_features.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature_extractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/feature_extractor.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,37 +25,49 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="9" />
+          <entry key="py" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="9" />
+          <entry key="Python" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="6498" />
+          <entry key="dummy" value="25" />
+          <entry key="py" value="8154" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="6498" />
+          <entry key="PLAIN_TEXT" value="25" />
+          <entry key="Python" value="8154" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/data_descriptor.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LSTM_predictor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
+            <state relative-caret-position="816">
+              <caret line="34" column="32" lean-forward="true" selection-start-line="9" selection-end-line="34" selection-end-column="32" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
-                <marker date="1543979350916" expanded="true" signature="962:1016" ph="..." />
-                <marker date="1543979350916" expanded="true" signature="1536:1767" ph="..." />
+                <element signature="e#0#56#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/LSTM_Modelling.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="81" column="120" selection-start-line="81" selection-start-column="120" selection-end-line="81" selection-end-column="120" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -65,16 +82,26 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>plot</find>
+      <find>pyplot</find>
+      <find>series</find>
+      <find>timeseries_to_supervised</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/feature_extractor.py" />
         <option value="$PROJECT_DIR$/clustered_data_writer.py" />
-        <option value="$PROJECT_DIR$/LSTM_predictor.py" />
         <option value="$PROJECT_DIR$/data_descriptor.py" />
+        <option value="$PROJECT_DIR$/feature_extractor.py" />
+        <option value="$PROJECT_DIR$/LSTM_predictor.py" />
+        <option value="$PROJECT_DIR$/shampoo.py" />
+        <option value="$PROJECT_DIR$/LSTM_Modelling.py" />
       </list>
     </option>
   </component>
@@ -104,7 +131,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/LSTM_predictor.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -119,7 +146,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.data_descriptor">
+  <component name="RunManager" selected="Python.shampoo">
     <configuration name="LSTM_predictor" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Modeling-rainfall-data-in-Bangladesh" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -204,18 +231,41 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="shampoo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Modeling-rainfall-data-in-Bangladesh" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LSTM_Modelling.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.feature_extractor" />
       <item itemvalue="Python.clustered_data_writer" />
       <item itemvalue="Python.LSTM_predictor" />
       <item itemvalue="Python.data_descriptor" />
+      <item itemvalue="Python.shampoo" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.data_descriptor" />
+        <item itemvalue="Python.shampoo" />
         <item itemvalue="Python.LSTM_predictor" />
-        <item itemvalue="Python.clustered_data_writer" />
         <item itemvalue="Python.feature_extractor" />
+        <item itemvalue="Python.data_descriptor" />
+        <item itemvalue="Python.clustered_data_writer" />
       </list>
     </recent_temporary>
   </component>
@@ -237,13 +287,13 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" weight="0.15650742" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.15650742" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="2" />
       <window_info anchor="bottom" id="Message" order="3" />
-      <window_info anchor="bottom" id="Find" order="4" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.32969433" />
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.27729258" />
       <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.32969433" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.3995633" />
@@ -258,7 +308,7 @@
     </layout>
     <layout-to-restore>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.15650742" />
+      <window_info content_ui="combo" id="Project" order="1" weight="0.15650742" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -340,29 +390,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/feature_extractor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="50" column="37" lean-forward="true" selection-end-line="116" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-            <marker date="1543537917608" expanded="true" signature="880:881" ph="..." />
-            <marker date="1543537917608" expanded="true" signature="880:2164" ph="..." />
-            <marker date="1543537917608" expanded="true" signature="1141:1866" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LSTM_predictor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="47" column="21" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data_descriptor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -371,6 +398,59 @@
             <element signature="e#0#19#0" expanded="true" />
             <marker date="1543979350916" expanded="true" signature="962:1016" ph="..." />
             <marker date="1543979350916" expanded="true" signature="1536:1767" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3/dist-packages/pandas/indexes/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="2133" selection-start-line="2133" selection-end-line="2133" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3/dist-packages/h5py/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3/dist-packages/matplotlib/axes/_axes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="544" selection-start-line="544" selection-end-line="544" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feature_extractor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="24" />
+          <folding>
+            <marker date="1543983147220" expanded="true" signature="880:881" ph="..." />
+            <marker date="1543983147220" expanded="true" signature="880:2246" ph="..." />
+            <marker date="1543983147220" expanded="true" signature="1141:1867" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LSTM_predictor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="34" column="32" lean-forward="true" selection-start-line="9" selection-end-line="34" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LSTM_Modelling.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="81" column="120" selection-start-line="81" selection-start-column="120" selection-end-line="81" selection-end-column="120" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>

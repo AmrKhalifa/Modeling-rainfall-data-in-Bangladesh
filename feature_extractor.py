@@ -54,7 +54,7 @@ def get_feature_vector(df):
     sum_means_stds = (means+stds).reshape(1,-1)
     means_stds = np.concatenate((means, stds)).reshape(1, -1)
 
-    return means_stds
+    return means, stds
 
     #return (means + stds).reshape(1,-1)
 
@@ -87,15 +87,19 @@ cluster_input = define_data_frame()
 
 for i in range(1, 36):
     df = dataframe.loc[dataframe['StationIndex'] == i]
-    z = get_feature_vector(df)
+    z1,z2 = get_feature_vector(df)
+    plt.plot(z1,label = 'Station Index: '+str(i))
 
-    station_dataframe = generate_iteration_data_frame(z)
-    cluster_input = concat_frames(cluster_input, station_dataframe)
 
-save_dataframe2CSV(cluster_input, "cluster_dataset.csv")
 
-my_frame = pd.read_csv('cluster_dataset.csv')
-cluster_data = my_frame.values[1:,1:]
+    #station_dataframe = generate_iteration_data_frame(z)
+    #cluster_input = concat_frames(cluster_input, station_dataframe)
+plt.legend()
+plt.show()
+#save_dataframe2CSV(cluster_input, "cluster_dataset.csv")
+
+#my_frame = pd.read_csv('cluster_dataset.csv')
+#cluster_data = my_frame.values[1:,1:]
 #print(cluster_data.shape)
 
 errors = []
