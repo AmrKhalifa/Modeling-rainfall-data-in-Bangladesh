@@ -32,7 +32,7 @@ def lstm_fit(train, batch_size, epochs, output):
 	X, y = train[:, 0:-1], train[:, -1]
 	X = X.reshape(X.shape[0], 1, X.shape[1])
 	model = Sequential()
-	model.add(LSTM(4, batch_input_shape=(1, X.shape[1], X.shape[2]), stateful=True))
+	model.add(LSTM(10, batch_input_shape=(1, X.shape[1], X.shape[2]), stateful=True))
 	model.add(Dense(1))
 	model.compile(loss='mse', optimizer='adam')
 	for i in range(10):
@@ -111,7 +111,7 @@ train, test = supervised_values[0:5000], supervised_values[5000:]
 # rescale the dataset
 scaler, train_scaled, test_scaled = scale(train, test)
 
-lstm_model = lstm_fit(train_scaled, 1, 10, 4)
+lstm_model = lstm_fit(train_scaled, 1, 10, 5)
 # predicting the training input to generate information for future forcasting
 ecasting
 train_reshaped = train_scaled[:, 0].reshape(len(train_scaled), 1, 1)
@@ -137,11 +137,11 @@ rmse = sqrt(mean_squared_error(ground_truth[5000 + 1:], predictions))
 print('Testing RMSE: %.4f' % rmse)
 
 # repeating the experiment
-trials = 10
+trials = 1
 error_values = list()
 for r in range(trials):
     # fit the model
-    lstm_model = lstm_fit(train_scaled, 1, 10, 4)
+    lstm_model = lstm_fit(train_scaled, 1, 10, 5)
 
     train_reshaped = train_scaled[:, 0].reshape(len(train_scaled), 1, 1)
     lstm_model.predict(train_reshaped, batch_size=1)
