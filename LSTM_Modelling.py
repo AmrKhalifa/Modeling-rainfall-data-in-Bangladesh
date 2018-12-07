@@ -10,7 +10,7 @@ from sklearn.preprocessing import MinMaxScaler
 import numpy
 import matplotlib.pyplot as plt
 import pandas as pd
-
+import sklearn
 ########################
 
 def timeseries_to_supervised(data, lag=1):
@@ -36,7 +36,7 @@ def lstm_fit(train, batch_size, epochs, output):
 	model.add(Dense(1))
 	model.compile(loss='mse', optimizer='adam')
 	for i in range(10):
-		model.fit(X, y, epochs=1, batch_size=batch_size, verbose=0, shuffle=False)
+		model.fit(X, y, epochs=10, batch_size=batch_size, verbose=0, shuffle=False)
 		model.reset_states()
 	return model
 
@@ -113,7 +113,6 @@ scaler, train_scaled, test_scaled = scale(train, test)
 
 lstm_model = lstm_fit(train_scaled, 1, 10, 5)
 # predicting the training input to generate information for future forcasting
-ecasting
 train_reshaped = train_scaled[:, 0].reshape(len(train_scaled), 1, 1)
 lstm_model.predict(train_reshaped, batch_size=1)
 
@@ -134,7 +133,16 @@ for i in range(len(test_scaled)):
 
 # model evaluation
 rmse = sqrt(mean_squared_error(ground_truth[5000 + 1:], predictions))
+y_true = ground_truth[5000 + 1:]
+y_pred = predictions
+
+r2 = sklearn.metrics.r2_score(y_true, y_pred)
+exp = sklearn.metrics.explained_variance_score(y_true, y_pred)
+
 print('Testing RMSE: %.4f' % rmse)
+
+print('r2: %.4f' %r2)
+print('EXP var: %.4f' %exp)
 
 # repeating the experiment
 trials = 1
