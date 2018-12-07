@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ca0e95f-62c5-4585-9177-01925324cf6c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/LSTM_Modelling.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdaboostRegressor.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/AdaboostRegressor.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LSTM_predictor.py" beforeDir="false" afterPath="$PROJECT_DIR$/LSTM_predictor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/correlation_between_features.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/correlation_between_features.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature_extractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/feature_extractor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LSTM_Modelling.py" beforeDir="false" afterPath="$PROJECT_DIR$/LSTM_Modelling.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,39 +31,24 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="25" />
-          <entry key="py" value="8154" />
+          <entry key="py" value="8364" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="25" />
-          <entry key="Python" value="8154" />
+          <entry key="Python" value="8364" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LSTM_predictor.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="34" column="32" lean-forward="true" selection-start-line="9" selection-end-line="34" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#56#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/LSTM_Modelling.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="81" column="120" selection-start-line="81" selection-start-column="120" selection-end-line="81" selection-end-column="120" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="216">
+              <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -287,7 +267,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.15650742" />
+      <window_info content_ui="combo" id="Project" order="1" weight="0.15650742" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -295,7 +275,7 @@
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" weight="0.32969433" />
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.27729258" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.32969433" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.32969433" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.3995633" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -308,13 +288,13 @@
     </layout>
     <layout-to-restore>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" weight="0.15650742" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.15650742" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="2" />
       <window_info anchor="bottom" id="Message" order="3" />
-      <window_info anchor="bottom" id="Find" order="4" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.32969433" />
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.27729258" />
       <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.32969433" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.3995633" />
@@ -447,11 +427,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LSTM_Modelling.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="81" column="120" selection-start-line="81" selection-start-column="120" selection-end-line="81" selection-end-column="120" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="216">
+          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
         </state>
       </provider>
     </entry>

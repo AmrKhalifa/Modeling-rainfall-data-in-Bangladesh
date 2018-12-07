@@ -32,10 +32,10 @@ def lstm_fit(train, batch_size, epochs, output):
 	X, y = train[:, 0:-1], train[:, -1]
 	X = X.reshape(X.shape[0], 1, X.shape[1])
 	model = Sequential()
-	model.add(LSTM(output, batch_input_shape=(batch_size, X.shape[1], X.shape[2]), stateful=True))
+	model.add(LSTM(4, batch_input_shape=(1, X.shape[1], X.shape[2]), stateful=True))
 	model.add(Dense(1))
 	model.compile(loss='mse', optimizer='adam')
-	for i in range(epochs):
+	for i in range(10):
 		model.fit(X, y, epochs=1, batch_size=batch_size, verbose=0, shuffle=False)
 		model.reset_states()
 	return model
@@ -81,9 +81,7 @@ def scale(train, test):
 
 ########################################################################################################################
 
-# load dataset
-#dataset = read_csv('shampoo_sales.csv',';', header=0, parse_dates=[0], index_col=0, squeeze=True, date_parser=parser)
-
+# data loading
 
 def read_data():
     df = pd.read_csv('cleaned_customized_daily_rainfall_data .csv')
@@ -110,17 +108,16 @@ supervised_values = supervised.values
 train, test = supervised_values[0:5000], supervised_values[5000:]
 
 
-
-
-# transform the scale of the data
+# rescale the dataset
 scaler, train_scaled, test_scaled = scale(train, test)
 
 lstm_model = lstm_fit(train_scaled, 1, 10, 4)
-# forecast the entire training dataset to build up state for forecasting
+# predicting the training input to generate information for future forcasting
+ecasting
 train_reshaped = train_scaled[:, 0].reshape(len(train_scaled), 1, 1)
 lstm_model.predict(train_reshaped, batch_size=1)
 
-# walk-forward validation on the test data
+
 predictions = list()
 for i in range(len(test_scaled)):
     # make one-step forecast
@@ -135,39 +132,34 @@ for i in range(len(test_scaled)):
     expected = ground_truth[len(train) + i + 1]
     print('day=%d, Predicted=%f, Expected=%f' % (i + 1, y_, expected))
 
-# report performance
+# model evaluation
 rmse = sqrt(mean_squared_error(ground_truth[5000 + 1:], predictions))
-print('Test RMSE: %.3f' % rmse)
-# line plot of observed vs predicted
-#plt.plot(raw_values[5000:])
-#plt.plot(predictions)
-#plt.show()
+print('Testing RMSE: %.4f' % rmse)
 
-
-# repeat experiment
+# repeating the experiment
 trials = 10
 error_values = list()
 for r in range(trials):
     # fit the model
     lstm_model = lstm_fit(train_scaled, 1, 10, 4)
-    # forecast the entire training dataset to build up state for forecasting
+
     train_reshaped = train_scaled[:, 0].reshape(len(train_scaled), 1, 1)
     lstm_model.predict(train_reshaped, batch_size=1)
-    # walk-forward validation on the test data
+
     predictions = list()
     for i in range(len(test_scaled)):
-        # make one-step forecast
+        # one-step look-ahead
         X, y = test_scaled[i, 0:-1], test_scaled[i, -1]
         y_ = predict(lstm_model, 1, X)
-        # invert scaling
+        # re_scaling
         y_ = re_transform(scaler, X, y_)
-        # invert differencing
+        # re_trending
         y_ = add_trend_back(ground_truth, y_, len(test_scaled) + 1 - i)
-        # store forecast
+
         predictions.append(y_)
-    # report performance
+    # save model performance
     rmse = sqrt(mean_squared_error(ground_truth[5000 + 1:], predictions))
-    print('%d) Test RMSE: %.3f' % (r + 1, rmse))
+    print('%d) Testing RMSE: %.3f' % (r + 1, rmse))
     error_values.append(rmse)
 
 plt.plot(ground_truth[5000:], label ='Ground Truth')
